@@ -1,111 +1,125 @@
-baseURL = "http://example.org/"
+baseURL = "https://soulcodex.es/"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
 
 # website title
-title = "RobertGarcia"
+title = "Roberto Garcia - An small blogging place to share programming knowledge"
 
-# language code ["en", "zh-CN", "fr", "pl", ...]
+# i18n configuration
 languageCode = "en"
-# language name ["English", "简体中文", "Français", "Polski", ...]
 languageName = "English"
+
+# copyright description used only for seo schema
+copyright = "Roberto García - soulcodex.es"
+
+enableRobotsTXT = true
 
 # Author config
 [author]
-  name = "Roberto García"
-  email = "info@soulcodex.es"
-  link = "mailto:info@soulcodex.es"
+    name = "Roberto García"
+    email = "info@soulcodex.es"
+    link = "mailto:info@soulcodex.es"
+
+[taxonomies]
+    series = "series"
+    tag = "tags"
+    category = "categories"
 
 # Menu config
 [menu]
   [[menu.main]]
     weight = 1
     identifier = "posts"
-    # you can add extra information before the name (HTML format is supported), such as icons
-    pre = ""
-    # you can add extra information after the name (HTML format is supported), such as icons
-    post = ""
     name = "Posts"
     url = "/posts/"
-    # title will be shown when you hover on this menu link
-    title = ""
-  [[menu.main]]
-    weight = 2
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "Tags"
-    url = "/tags/"
-    title = ""
   [[menu.main]]
     weight = 3
     identifier = "categories"
-    pre = ""
-    post = ""
     name = "Categories"
     url = "/categories/"
-    title = ""
 
-[params.header]
-  [params.header.title]
-  name = "Roberto García"
-  typeit = true
+[params]
+    title = "An small blogging place to share programming knowledge."
+    description = "An small blogging place to share programming knowledge and learn from each others."
+    images = ["/images/me.webp"]
+    [params.header]
+        desktopMode = "fixed"
+        [params.header.title]
+            name = "Roberto García"
+            pre = "<i class='fa-solid fa-terminal'></i>&nbsp;"
+            typeit = false
+    [params.footer]
+      enable = true
+      custom = "Be always your best version."
+      hugo = false
+      copyright = true
+      author = true
+      since = 2023
 
-[params.footer]
-  enable = true
-  # Custom content (HTML format is supported)
-  # 自定义内容 (支持 HTML 格式)
-  custom = ""
-  hugo = false
-  copyright = true
-  author = true
-  since = 2023
+    [params.section]
+      paginate = 10
+      dateFormat = "01-02"
+      rss = 10
 
-[params.section]
-  paginate = 10
-  dateFormat = "01-02"
-  rss = 10
+    [params.list]
+      paginate = 10
+      dateFormat = "01-02"
+      rss = 10
 
-[params.list]
-  paginate = 10
-  dateFormat = "01-02"
-  rss = 10
+    [params.page.share]
+        enable = true
+        Twitter = true
+        Facebook = true
+        Linkedin = true
+        Whatsapp = false
+        Pinterest = false
+        Tumblr = false
+        HackerNews = false
+        Reddit = false
+        VK = false
+        Buffer = false
+        Xing = false
+        Line = false
+        Instapaper = false
+        Pocket = false
+        Flipboard = false
+        Weibo = false
+        Blogger = false
+        Baidu = false
+        Odnoklassniki = false
+        Evernote = false
+        Skype = false
+        Trello = false
+        Mix = false
+    [params.search]
+        enable = false
+        # type of search engine ["lunr", "algolia"]
+        type = "lunr"
+        # max index length of the chunked content
+        contentLength = 4000
+        #  max number of results length
+        maxResultLength = 10
+        #  snippet length of the result
+        snippetLength = 30
+        #  HTML tag name of the highlight part in results
+        highlightTag = "em"
+        #  whether to use the absolute URL based on the baseURL in search index
+        absoluteURL = false
+            [params.search.algolia]
+            index = ""
+            appID = ""
+            searchKey = ""
+
 
 [Permalinks]
-  # posts = ":year/:month/:filename"
-  posts = ":year/:filename"
-
-[params.page.share]
-  enable = true
-  Twitter = true
-  Facebook = true
-  Linkedin = true
-  Whatsapp = false
-  Pinterest = false
-  Tumblr = false
-  HackerNews = false
-  Reddit = false
-  VK = false
-  Buffer = false
-  Xing = false
-  Line = false
-  Instapaper = false
-  Pocket = false
-  Flipboard = false
-  Weibo = false
-  Blogger = false
-  Baidu = false
-  Odnoklassniki = false
-  Evernote = false
-  Skype = false
-  Trello = false
-  Mix = false
+  posts = "/:section/:year/:filename"
 
 [sitemap]
   changefreq = "weekly"
   filename = "sitemap.xml"
   priority = 0.5
+
 # Markup related configuration in Hugo
 [markup]
   # Syntax Highlighting (https://gohugo.io/content-management/syntax-highlighting)
@@ -117,141 +131,101 @@ languageName = "English"
 # Multilingual
 # 多语言
 [languages]
-    [languages.en]
-        weight = 1
-        languageCode = "en"
-        languageName = "English"
-        hasCJKLanguage = false
-    [languages.en.menu]
-        [[languages.en.menu.main]]
-            weight = 1
-            identifier = "posts"
-            pre = ""
-            post = ""
-            name = "Posts"
-            url = "/posts/"
-            title = ""
-        [[languages.en.menu.main]]
-            weight = 2
-            identifier = "tags"
-            pre = ""
-            post = ""
-            name = "Tags"
-            url = "/tags/"
-            title = ""
-        [[languages.en.menu.main]]
-            weight = 3
-            identifier = "categories"
-            pre = ""
-            post = ""
-            name = "Categories"
-            url = "/categories/"
-            title = ""
-        [[languages.en.menu.main]]
-            weight = 5
-            identifier = "about"
-            pre = ""
-            post = ""
-            name = "About"
-            url = "/about/"
-            title = ""
-        [[languages.en.menu.main]]
-            weight = 6
-            identifier = "github"
-            pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-            post = ""
-            name = ""
-            url = "https://github.com/dillonzq/LoveIt"
-            title = "GitHub"
-    [languages.en.params]
-        [languages.en.params.home]
-            rss = 10
-        [languages.en.params.home.profile]
-            enable = true
-            gravatarEmail = ""
-            avatarURL = "/images/avatar.png"
-            title = ""
-            subtitle = "A Clean, Elegant but Advanced Hugo Theme"
-            typeit = true
-            social = true
-            disclaimer = ""
-        [languages.en.params.social]
-            GitHub = "xxxx"
-            Twitter = "xxxx"
-            Instagram = "xxxx"
-            Facebook = "xxxx"
-            Telegram = "xxxx"
-            Youtubelegacy = "xxxx"
-            Phone = "555-555-555"
-            Email = "xxxx@xxxx.com"
-            RSS = true
     [languages.es]
         weight = 2
         languageCode = "es"
         languageName = "Español"
         hasCJKLanguage = true
-        copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
         [languages.es.menu]
             [[languages.es.menu.main]]
                 weight = 1
                 identifier = "posts"
-                pre = ""
-                post = ""
                 name = "Posts"
-                url = "/posts/"
+                url = "/es/posts/"
                 title = ""
             [[languages.es.menu.main]]
                 weight = 2
-                identifier = "tags"
-                pre = ""
-                post = ""
-                name = "Etiquetas"
-                url = "/tags/"
-                title = ""
-            [[languages.es.menu.main]]
-                weight = 3
                 identifier = "categories"
-                pre = ""
-                post = ""
                 name = "Categorías"
                 url = "/categories/"
                 title = ""
             [[languages.es.menu.main]]
-                weight = 5
+                weight = 3
                 identifier = "about"
-                pre = ""
-                post = ""
                 name = "Acerca de mí"
-                url = "/about/"
+                url = "/es/about/"
                 title = ""
             [[languages.es.menu.main]]
-                weight = 6
+                weight = 4
                 identifier = "github"
                 pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-                post = ""
-                name = ""
-                url = "https://github.com/dillonzq/LoveIt"
+                url = "https://github.com/soulcodex"
                 title = "GitHub"
         [languages.es.params]
+            [languages.es.params.footer]
+                custom = "Se siempre tu mejor version."
             [languages.es.params.home]
                 rss = 10
+            [languages.es.params.search]
+                placeholder = "Buscar ..."
             [languages.es.params.home.profile]
                 enable = true
-                gravatarEmail = ""
-                avatarURL = "/images/avatar.png"
-                title = ""
-                subtitle = "一个简洁、优雅且高效的 Hugo 主题"
+                avatarURL = "/images/me.webp"
+                title = "Hola <i class='fa-regular fa-hand fa-xs'></i> soy Roberto Garcia / Backend Software Engineer<br><br><i class='fa-brands fa-php fa-2xl'></i>&nbsp;<i class='fa-brands fa-golang fa-2xl'></i>&nbsp;&nbsp;<i class='fa-brands fa-python fa-2xl'></i>&nbsp;&nbsp;<i class='fa-brands fa-node fa-2xl'></i>"
+                subtitle = "Backend Software Engineer en <a target='_blank' href='https://www.linkedin.com/company/wallbox-chargers/'>Wallbox <i class='fa-sharp fa-solid fa-bolt fa-xs' aria-hidden='true'></i></a>"
                 typeit = true
                 social = true
-                disclaimer = ""
+                disclaimer = "Consejos, tutoriales y experiencias desarrollando software con PHP, Go, Python y Node."
             [languages.es.params.social]
-            GitHub = "xxxx"
-            Weibo = "xxxx"
-            Steam = "xxxx"
-            Zhihu = "xxxx"
-            Douban = "xxxx"
-            Devto = "xxxx"
-            Bilibili = "xxxx"
-            Email = "xxxx@xxxx.com"
-            Phone = "555-555-555"
-            RSS = true
+                GitHub = "soulcodex"
+                Telegram = "soulcodex"
+                Email = "info@soulcodex.es"
+                RSS = true
+    [languages.en]
+        weight = 1
+        languageCode = "en"
+        languageName = "English"
+        hasCJKLanguage = false
+        [languages.en.menu]
+            [[languages.en.menu.main]]
+                weight = 1
+                identifier = "posts"
+                name = "Posts"
+                url = "/posts/"
+                title = ""
+            [[languages.en.menu.main]]
+                weight = 2
+                identifier = "categories"
+                name = "Categories"
+                url = "/categories/"
+                title = ""
+            [[languages.en.menu.main]]
+                weight = 3
+                identifier = "about"
+                name = "About me"
+                url = "/about/"
+                title = ""
+            [[languages.en.menu.main]]
+                weight = 4
+                identifier = "github"
+                pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
+                url = "https://github.com/soulcodex"
+                title = "GitHub"
+        [languages.en.params]
+            [languages.en.params.home]
+                rss = 10
+            [languages.en.params.search]
+                placeholder = "Search ..."
+            [languages.en.params.home.profile]
+                enable = true
+                avatarURL = "/images/me.webp"
+                title = "Hello <i class='fa-regular fa-hand fa-xs'></i> I'm Roberto Garcia Backend Software Engineer<br><br><i class='fa-brands fa-php fa-2xl'></i>&nbsp;<i class='fa-brands fa-golang fa-2xl'></i>&nbsp;&nbsp;<i class='fa-brands fa-python fa-2xl'></i>&nbsp;&nbsp;<i class='fa-brands fa-node fa-2xl'></i>"
+                subtitle = "Backend Software Engineer at <a target='_blank' href='https://www.linkedin.com/company/wallbox-chargers/'>Wallbox <i class='fa-sharp fa-solid fa-bolt fa-xs' aria-hidden='true'></i></a>"
+                typeit = true
+                social = true
+                disclaimer = "Advices, tutorials and experiences developing software with PHP, Go, Python and Node."
+            [languages.en.params.social]
+                GitHub = "soulcodex"
+                Telegram = "soulcodex"
+                Email = "info@soulcodex.es"
+                RSS = true
