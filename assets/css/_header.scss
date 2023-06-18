@@ -1,0 +1,4 @@
+[theme=dark] {
+  @include dark-theme-texts-hover-opacity('.header-title a', 0.8);
+  @include dark-theme-texts-hover-opacity('.menu-item', 0.8);
+}

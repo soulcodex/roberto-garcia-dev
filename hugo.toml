@@ -21,6 +21,9 @@ enableRobotsTXT = true
     email = "info@soulcodex.es"
     link = "mailto:info@soulcodex.es"
 
+[outputs]
+    home = ["HTML", "RSS", "JSON"]
+
 [taxonomies]
     series = "series"
     tag = "tags"
@@ -67,6 +70,20 @@ enableRobotsTXT = true
       dateFormat = "01-02"
       rss = 10
 
+    [params.analytics]
+      enable = false
+
+    [params.seo]
+        image = "/images/me.webp"
+        thumbnailUrl = "/images/me.webp"
+
+    [params.page.comment]
+        enable = false
+
+    [params.page.seo.publisher]
+        name = "Roberto García"
+        logoUrl = "/images/me.webp"
+
     [params.page.share]
         enable = true
         Twitter = true
@@ -93,7 +110,7 @@ enableRobotsTXT = true
         Trello = false
         Mix = false
     [params.search]
-        enable = false
+        enable = true
         # type of search engine ["lunr", "algolia"]
         type = "lunr"
         # max index length of the chunked content
@@ -106,10 +123,6 @@ enableRobotsTXT = true
         highlightTag = "em"
         #  whether to use the absolute URL based on the baseURL in search index
         absoluteURL = false
-            [params.search.algolia]
-            index = ""
-            appID = ""
-            searchKey = ""
 
 
 [Permalinks]

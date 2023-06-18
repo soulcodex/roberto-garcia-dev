@@ -1,0 +1,7 @@
+@mixin dark-theme-texts-hover-opacity($selector, $hover-opacity) {
+  #{$selector} {
+    &:hover {
+      opacity: #{$hover-opacity};
+    }
+  }
+}

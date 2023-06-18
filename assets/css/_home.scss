@@ -1,0 +1,42 @@
+[theme=dark] {
+  @include dark-theme-texts-hover-opacity('.home-subtitle a', 0.8);
+  @include dark-theme-texts-hover-opacity('.links i', 0.8);
+
+  .single .post-meta a {
+    &:hover {
+      color: $pink-hover-color;
+    }
+  }
+
+  .home[data-home=posts] .summary .content {
+    color: #a9a9b3;
+  }
+
+  .home .home-profile .home-disclaimer {
+    color: #a9a9b3;
+  }
+
+  .home[data-home=posts] .summary .post-footer .post-tags {
+    a, i {
+      color: #a9a9b3;
+    }
+  }
+}
+
+.home[data-home=posts] .summary .post-footer, .home[data-home=posts] .summary .post-footer .post-tags {
+  a:hover, i:hover {
+    color: $pink-hover-color !important;
+  }
+}
+
+footer {
+  color: #a9a9b3;
+
+  .author a {
+    color: #a9a9b3;
+
+    &:hover {
+      color: $pink-hover-color;
+    }
+  }
+}

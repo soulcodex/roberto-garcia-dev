@@ -11,6 +11,7 @@ toc:
   auto: true
 lightgallery: true
 twemoji: true
+summary: "This is my first amazing blog post"
 ---
 
 ## Requirements
