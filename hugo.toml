@@ -78,7 +78,16 @@ enableRobotsTXT = true
         thumbnailUrl = "/images/me.webp"
 
     [params.page.comment]
-        enable = false
+        enable = true
+        [params.page.comment.telegram]
+            enable = true
+            siteID = "-CkSHPfQ"
+            limit = 10
+            height = ""
+            color = ""
+            colorful = true
+            dislikes = false
+            outlined = true
 
     [params.page.seo.publisher]
         name = "Roberto García"
