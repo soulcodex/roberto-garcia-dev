@@ -1,0 +1,229 @@
+baseURL: 'https://soulcodex.es/'
+theme: LoveIt
+title: Roberto Garcia - An small blogging place to share programming knowledge
+languageCode: en
+languageName: English
+copyright: Roberto García - soulcodex.es
+enableRobotsTXT: true
+author:
+  name: Roberto García
+  email: info@soulcodex.es
+  link: 'mailto:info@soulcodex.es'
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+taxonomies:
+  series: series
+  tag: tags
+  category: categories
+menu:
+  main:
+    - weight: 1
+      identifier: posts
+      name: Posts
+      url: /posts/
+    - weight: 3
+      identifier: categories
+      name: Categories
+      url: /categories/
+
+params:
+  title: An small blogging place to share programming knowledge.
+  description: >-
+    An small blogging place to share programming knowledge and learn from each
+    others.
+  images:
+    - /images/me.webp
+  header:
+    desktopMode: fixed
+    title:
+      name: Roberto García
+      pre: <i class='fa-solid fa-terminal'></i>&nbsp;
+      typeit: false
+  footer:
+    enable: true
+    custom: Be always your best version.
+    hugo: false
+    copyright: true
+    author: true
+    since: 2023
+  section:
+    paginate: 10
+    dateFormat: 01-02
+    rss: 10
+  list:
+    paginate: 10
+    dateFormat: 01-02
+    rss: 10
+  analytics:
+    enable: false
+  seo:
+    image: /images/me.webp
+    thumbnailUrl: /images/me.webp
+  page:
+    comment:
+      enable: true
+      disqus:
+        enable: true
+        shortname: roberto-garcia-developers-blog
+    seo:
+      publisher:
+        name: Roberto García
+        logoUrl: /images/me.webp
+    share:
+      enable: true
+      Twitter: true
+      Facebook: true
+      Linkedin: true
+      Whatsapp: false
+      Pinterest: false
+      Tumblr: false
+      HackerNews: false
+      Reddit: false
+      VK: false
+      Buffer: false
+      Xing: false
+      Line: false
+      Instapaper: false
+      Pocket: false
+      Flipboard: false
+      Weibo: false
+      Blogger: false
+      Baidu: false
+      Odnoklassniki: false
+      Evernote: false
+      Skype: false
+      Trello: false
+      Mix: false
+  search:
+    enable: true
+    type: lunr
+    contentLength: 4000
+    maxResultLength: 10
+    snippetLength: 30
+    highlightTag: em
+    absoluteURL: false
+Permalinks:
+  posts: '/:section/:year/:filename'
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
+markup:
+  highlight:
+    noClasses: false
+languages:
+  es:
+    weight: 2
+    languageCode: es
+    languageName: Español
+    hasCJKLanguage: true
+    menu:
+      main:
+        - weight: 1
+          identifier: posts
+          name: Posts
+          url: /es/posts/
+          title: ''
+        - weight: 2
+          identifier: categories
+          name: Categorías
+          url: /categories/
+          title: ''
+        - weight: 3
+          identifier: about
+          name: Acerca de mí
+          url: /es/about/
+          title: ''
+        - weight: 4
+          identifier: github
+          pre: <i class='fab fa-github fa-fw' aria-hidden='true'></i>
+          url: 'https://github.com/soulcodex'
+          title: GitHub
+    params:
+      footer:
+        custom: Se siempre tu mejor version.
+      home:
+        rss: 10
+        profile:
+          enable: true
+          avatarURL: /images/me.webp
+          title: >-
+            Hola <i class='fa-regular fa-hand fa-xs'></i> soy Roberto Garcia /
+            Backend Software Engineer<br><br><i class='fa-brands fa-php
+            fa-2xl'></i>&nbsp;<i class='fa-brands fa-golang
+            fa-2xl'></i>&nbsp;&nbsp;<i class='fa-brands fa-python
+            fa-2xl'></i>&nbsp;&nbsp;<i class='fa-brands fa-node fa-2xl'></i>
+          subtitle: >-
+            Backend Software Engineer en <a target='_blank'
+            href='https://www.linkedin.com/company/wallbox-chargers/'>Wallbox <i
+            class='fa-sharp fa-solid fa-bolt fa-xs' aria-hidden='true'></i></a>
+          typeit: true
+          social: true
+          disclaimer: >-
+            Consejos, tutoriales y experiencias desarrollando software con PHP,
+            Go, Python y Node.
+      search:
+        placeholder: Buscar ...
+      social:
+        GitHub: soulcodex
+        Telegram: soulcodex
+        Email: info@soulcodex.es
+        RSS: true
+  en:
+    weight: 1
+    languageCode: en
+    languageName: English
+    hasCJKLanguage: false
+    menu:
+      main:
+        - weight: 1
+          identifier: posts
+          name: Posts
+          url: /posts/
+          title: ''
+        - weight: 2
+          identifier: categories
+          name: Categories
+          url: /categories/
+          title: ''
+        - weight: 3
+          identifier: about
+          name: About me
+          url: /about/
+          title: ''
+        - weight: 4
+          identifier: github
+          pre: <i class='fab fa-github fa-fw' aria-hidden='true'></i>
+          url: 'https://github.com/soulcodex'
+          title: GitHub
+    params:
+      home:
+        rss: 10
+        profile:
+          enable: true
+          avatarURL: /images/me.webp
+          title: >-
+            Hello <i class='fa-regular fa-hand fa-xs'></i> I'm Roberto Garcia
+            Backend Software Engineer<br><br><i class='fa-brands fa-php
+            fa-2xl'></i>&nbsp;<i class='fa-brands fa-golang
+            fa-2xl'></i>&nbsp;&nbsp;<i class='fa-brands fa-python
+            fa-2xl'></i>&nbsp;&nbsp;<i class='fa-brands fa-node fa-2xl'></i>
+          subtitle: >-
+            Backend Software Engineer at <a target='_blank'
+            href='https://www.linkedin.com/company/wallbox-chargers/'>Wallbox <i
+            class='fa-sharp fa-solid fa-bolt fa-xs' aria-hidden='true'></i></a>
+          typeit: true
+          social: true
+          disclaimer: >-
+            Advices, tutorials and experiences developing software with PHP, Go,
+            Python and Node.
+      search:
+        placeholder: Search ...
+      social:
+        GitHub: soulcodex
+        Telegram: soulcodex
+        Email: info@soulcodex.es
+        RSS: true

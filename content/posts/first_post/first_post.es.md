@@ -9,7 +9,7 @@ tags:
     - first
 toc:
   auto: true
-lightgallery: true
+lightgallery: false
 twemoji: true
 summary: "This is my first amazing blog post"
 ---

@@ -1,17 +1,17 @@
 ---
-title: "First_post"
+title: "How implement CQRS on FastAPI"
 date: 2023-06-08T23:50:14+02:00
 draft: false
 author: Roberto Garcia
 categories:
-  - first
+  - python
 tags:
-  - first
+  - python
 toc:
   auto: true
-lightgallery: true
+lightgallery: false
 twemoji: true
-summary: "This is my first amazing blog post"
+summary: "CQRS on FastAPI"
 ---
 
 ## Requirements
