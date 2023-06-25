@@ -58,7 +58,10 @@ params:
     dateFormat: 01-02
     rss: 10
   analytics:
-    enable: false
+    enable: true
+    google:
+      id: "G-VJ9CM0EE6B"
+      anonymizeIP: true
   seo:
     image: /images/me.webp
     thumbnailUrl: /images/me.webp
